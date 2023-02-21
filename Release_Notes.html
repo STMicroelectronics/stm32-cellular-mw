@@ -1528,22 +1528,22 @@ text-align: center;
 <section id="update-history" class="col-sm-12 col-lg-8">
 <h1>Update history</h1>
 <div class="collapse">
-<input type="checkbox" id="collapse-section5" checked aria-hidden="true"> <label for="collapse-section5" aria-hidden="true"><strong>V7.0.1 / 07-Feb-2023</strong></label>
+<input type="checkbox" id="collapse-section6" checked aria-hidden="true"> <label for="collapse-section6" aria-hidden="true"><strong>V7.0.2 / 21-Feb-2023</strong></label>
 <div>
 <h2 id="main-changes">Main changes</h2>
 <h3 id="maintenance-release-and-product-update">Maintenance release and product update</h3>
-<p>This V7.0.1 is the same as V7.0.0 with minor adaptations to be used in X-CUBE-AZURE</p>
+<p>This V7.0.2 is the same as V7.0.1 with minor adaptations on AT-Core. It has been adapted to support standalone T1SC modem.</p>
 <h2 id="bug-fixes">Bug fixes</h2>
 <ul>
-<li>Same as 7.0.0</li>
+<li>Same as 7.0.1</li>
 </ul>
 <h2 id="known-limitations">Known Limitations</h2>
 <ul>
-<li>Same as 7.0.0</li>
+<li>Same as 7.0.1</li>
 </ul>
 <h2 id="memory-footprint">Memory footprint</h2>
 <ul>
-<li>Same as 7.0.0</li>
+<li>Same as 7.0.1</li>
 </ul>
 <h2 id="hw-supported">HW supported</h2>
 <ul>
@@ -1552,10 +1552,34 @@ text-align: center;
 </div>
 </div>
 <div class="collapse">
-<input type="checkbox" id="collapse-section4" checked aria-hidden="true"> <label for="collapse-section4" aria-hidden="true"><strong>V7.0.0 / 28-Feb-2022</strong></label>
+<input type="checkbox" id="collapse-section5" aria-hidden="true"> <label for="collapse-section5" aria-hidden="true"><strong>V7.0.1 / 07-Feb-2023</strong></label>
 <div>
 <h2 id="main-changes-1">Main changes</h2>
 <h3 id="maintenance-release-and-product-update-1">Maintenance release and product update</h3>
+<p>This V7.0.1 is the same as V7.0.0 with minor adaptations to be used in X-CUBE-AZURE</p>
+<h2 id="bug-fixes-1">Bug fixes</h2>
+<ul>
+<li>Same as 7.0.0</li>
+</ul>
+<h2 id="known-limitations-1">Known Limitations</h2>
+<ul>
+<li>Same as 7.0.0</li>
+</ul>
+<h2 id="memory-footprint-1">Memory footprint</h2>
+<ul>
+<li>Same as 7.0.0</li>
+</ul>
+<h2 id="hw-supported-1">HW supported</h2>
+<ul>
+<li>See Project Release Note</li>
+</ul>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section4" aria-hidden="true"> <label for="collapse-section4" aria-hidden="true"><strong>V7.0.0 / 28-Feb-2022</strong></label>
+<div>
+<h2 id="main-changes-2">Main changes</h2>
+<h3 id="maintenance-release-and-product-update-2">Maintenance release and product update</h3>
 <p>This V7.0.0 is a big change regarding previous versions</p>
 <ul>
 <li>Azure RTOS (ThreadX and NextX Duo) has been added to FreeRTOS/LwIP</li>
@@ -1586,7 +1610,7 @@ text-align: center;
 <li>Code dedicated to Socket Mode (IP stack in modem) has been under compilation flag to minimize code footprint if IP stack is STM32 side. The file at_custom_modem_socket is required now only if using Modem IP stack.</li>
 </ul></li>
 </ul>
-<h2 id="bug-fixes-1">Bug fixes</h2>
+<h2 id="bug-fixes-2">Bug fixes</h2>
 <ul>
 <li>Missing PS network domain + control plane detach. New API function added: CS_deregister_net().</li>
 <li>AT : [Azure] optimization of Socket Data Receive when polling requests</li>
@@ -1596,7 +1620,7 @@ text-align: center;
 <li>AT : (Sequans only) A tempo has been added after modem power off (to avoid problem if modem is restarted immediately).</li>
 <li>IPC : Azure NetXDuo (IP stack in STM32) where “Modem UART RX interrupt rearm” was failing</li>
 </ul>
-<h2 id="known-limitations-1">Known Limitations</h2>
+<h2 id="known-limitations-2">Known Limitations</h2>
 <ul>
 <li>Low Power concerns only modem part (STM32 low power is not yet implemented).</li>
 <li>No modem low power in IP stack in STM32 mode (i.e. only in modem IP mode).</li>
@@ -1609,7 +1633,7 @@ text-align: center;
 <li>COM : The error code returned by the Modem is not reported to the application via socket BSD.</li>
 <li>CellularIoT samples is an application example demonstrating the use of display and sensors of B-L462E-CELL1 board. First line displayed should be the UTC date and time. When data connection is established, with the actual application, Date/Time is requested one time only to a distant server and sometimes the server doesn’t respond to this request; in this case date/time isn’t displayed and treatment continue.</li>
 </ul>
-<h2 id="memory-footprint-1">Memory footprint</h2>
+<h2 id="memory-footprint-2">Memory footprint</h2>
 <table>
 <thead>
 <tr class="header">
@@ -1651,7 +1675,7 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="hw-supported-1">HW supported</h2>
+<h2 id="hw-supported-2">HW supported</h2>
 <ul>
 <li>See Project Release Note</li>
 </ul>
@@ -1660,7 +1684,7 @@ text-align: center;
 <div class="collapse">
 <input type="checkbox" id="collapse-section3" aria-hidden="true"> <label for="collapse-section3" aria-hidden="true"><strong>V6.0.0 / 30-Apr-2021</strong></label>
 <div>
-<h2 id="main-changes-2">Main Changes</h2>
+<h2 id="main-changes-3">Main Changes</h2>
 <p>This V6.0.0 adds the following features:</p>
 <ul>
 <li>Modem low power supported for BG96 and T1SC (By defaut low power mode is not activated)</li>
@@ -1675,7 +1699,7 @@ text-align: center;
 <li>New API for control is added. Data Cache is still used internally but no more an API for applications, it is now covered by Cellular API library.</li>
 <li>HW setups supported changed</li>
 </ul>
-<h2 id="bug-fixes-2">Bug fixes</h2>
+<h2 id="bug-fixes-3">Bug fixes</h2>
 <ul>
 <li>Data cache callback</li>
 <li>SIM state during modem initialization</li>
@@ -1684,7 +1708,7 @@ text-align: center;
 <li>MDK warnings correction</li>
 <li>MISRA, CodeSonar &amp; CodeReview corrections</li>
 </ul>
-<h2 id="known-limitations-2">Known Limitations</h2>
+<h2 id="known-limitations-3">Known Limitations</h2>
 <ul>
 <li>P-L496G-CELL01 (UG96) is no more supported</li>
 <li>No modem low power in LwIP mode (i.e. only in modem socket mode).</li>
@@ -1702,7 +1726,7 @@ text-align: center;
 <li>COM_ICC (to access ST4SIM through NDLC middleware) is not officially supported and is not supporting low power(It will in next release).</li>
 <li>Few MISRA-C®:2012 rules (will be corrected in next delivery)</li>
 </ul>
-<h2 id="memory-footprint-2">Memory footprint</h2>
+<h2 id="memory-footprint-3">Memory footprint</h2>
 <table>
 <thead>
 <tr class="header">
@@ -1769,7 +1793,7 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="hw-supported-2">HW supported</h2>
+<h2 id="hw-supported-3">HW supported</h2>
 <ul>
 <li>P-L496G-CELL02 (note Disco L496 included in the pack is a 32L496GDISCOVERY without screen)</li>
 <li>32L496GDISCOVERY + MB1329B (with BG96) (similar as P-L496-CELL02 but it uses a regular Discovery L496 board)</li>
@@ -1793,7 +1817,7 @@ text-align: center;
 <div class="collapse">
 <input type="checkbox" id="collapse-section2" aria-hidden="true"> <label for="collapse-section2" aria-hidden="true"><strong>V5.2.0 / 30-Sept-2020</strong></label>
 <div>
-<h2 id="main-changes-3">Main Changes</h2>
+<h2 id="main-changes-4">Main Changes</h2>
 <p>This V5.2.0 adds the following features:</p>
 <ul>
 <li>Unofficial support of T1SE Discovery board</li>
@@ -1808,7 +1832,7 @@ text-align: center;
 <p>Note, if the user application uses printf functions, heap must be adapted to avoid crash</p>
 <p>In case of issues and no idea, keep in mind that fully reset the flash using STM32CubeProgrammer could help. Indeed mixing FW versions with different boot menu versions could lead to instabilities.</p>
 <p>For modem information see modems Release Note located here : Drivers\BSP\X_STMOD_PLUS_MODEMS\</p>
-<h2 id="bug-fixes-3">Bug fixes</h2>
+<h2 id="bug-fixes-4">Bug fixes</h2>
 <ul>
 <li>Network registration sometime blocks</li>
 <li>Memory overwrite in TLS wrapper</li>
@@ -1816,7 +1840,7 @@ text-align: center;
 <li>Minor fixes about MQTT application configuration</li>
 <li>MISRA, CodeSonar &amp; CodeReview corrections</li>
 </ul>
-<h2 id="known-limitations-3">Known Limitations</h2>
+<h2 id="known-limitations-4">Known Limitations</h2>
 <ul>
 <li>LwIP suspend/resume not stable (no pooling, no SIM access, no modem reboot detection …)</li>
 <li>MQTT in LwIP, sometime issue during handshake TLS</li>
@@ -1826,7 +1850,7 @@ text-align: center;
 <li>For MDK_ARM in LwIP, warning in Middlewares_Party.c</li>
 <li>Automatic APN selection is embedded but for applications (MQTT) that use Network_Library layer, APN must be set thanks to boot menu (like before)</li>
 </ul>
-<h2 id="memory-footprint-3">Memory footprint</h2>
+<h2 id="memory-footprint-4">Memory footprint</h2>
 <table>
 <thead>
 <tr class="header">
@@ -1888,7 +1912,7 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="hw-supported-3">HW supported</h2>
+<h2 id="hw-supported-4">HW supported</h2>
 <ul>
 <li>P-L496G-CELL01 + (optionnaly) X-NUCLEO-IKS01A2</li>
 <li>P-L496G-CELL02 + (optionnaly) X-NUCLEO-IKS01A2</li>
@@ -1913,7 +1937,7 @@ text-align: center;
 <div class="collapse">
 <input type="checkbox" id="collapse-section1" aria-hidden="true"> <label for="collapse-section1" aria-hidden="true"><strong>V5.0.0 / 11-Oct-2019</strong></label>
 <div>
-<h2 id="main-changes-4">Main Changes</h2>
+<h2 id="main-changes-5">Main Changes</h2>
 <p>This V5.0.0 adds the following features:</p>
 <ul>
 <li>Network Library layer added (above V4.0.0). The goal of this component is to standardize network API between Wi-Fi, Ethernet and cellular media.</li>
@@ -1930,14 +1954,14 @@ text-align: center;
 <li>V3.0.0 (W1907) : Sequans GM01Q module support added + features improvements + Echo client application</li>
 <li>V4.0.0 (W1921) : Maintenance release</li>
 </ul>
-<h2 id="bug-fixes-4">Bug fixes</h2>
+<h2 id="bug-fixes-5">Bug fixes</h2>
 <ul>
 <li>Default application selected by menu</li>
 <li>Change pooling period in Grovestream provided blueprint</li>
 <li>Move to latest FreeRTOS version 10.2.1</li>
 <li>build issues with USE_PRINTF=1</li>
 </ul>
-<h2 id="known-limitations-4">Known Limitations</h2>
+<h2 id="known-limitations-5">Known Limitations</h2>
 <ul>
 <li>FreeRTOS configuration improvement for memory issues detections</li>
 <li>New optional boot mode and voucher read from menu</li>
@@ -1950,7 +1974,7 @@ text-align: center;
 <li>Only one PING at a time (modem restriction applicable to LwIP too)</li>
 <li>UDP in not-connected mode is not yet supported by Sequans modem</li>
 </ul>
-<h2 id="memory-footprint-4">Memory footprint</h2>
+<h2 id="memory-footprint-5">Memory footprint</h2>
 <table>
 <thead>
 <tr class="header">
@@ -2002,7 +2026,7 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="hw-supported-4">HW supported</h2>
+<h2 id="hw-supported-5">HW supported</h2>
 <ul>
 <li>P-L496G-CELL01</li>
 <li>P-L496G-CELL02</li>
